@@ -30,9 +30,15 @@ class StoryPageState extends State<StoryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        //TODO: Step 1 - Add background.png to this Container as a background image.
         padding: const EdgeInsets.symmetric(vertical: 48, horizontal: 16),
         constraints: const BoxConstraints.expand(),
+        // COMPLETED: Step 1 - Add background.png to this Container as a background image.
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/background.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -58,7 +64,7 @@ class StoryPageState extends State<StoryPage> {
                   child: const Text(
                     //TODO: Step 13 - Use the storyBrain to get the text for choice 1.
                     'Choice 1',
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
               ),
@@ -76,7 +82,7 @@ class StoryPageState extends State<StoryPage> {
                   child: const Text(
                     //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
                     'Choice 2',
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
               ),
